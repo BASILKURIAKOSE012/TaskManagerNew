@@ -12,62 +12,63 @@ import { LoginBoxComponent } from '../login-box/login-box.component';
   styleUrls: ['./sign-up-box.component.css']
 })
 export class SignUpBoxComponent implements OnInit {
-registerForm:FormGroup;
-user:any;
-checkEmail!:any;
-constructor(private _fb:FormBuilder,private _userService:UsersService,private _coreService:CoreService,private _dialog:MatDialog,private _dialogRef:MatDialogRef<LoginComponent>){
-this.registerForm= this._fb.group({
-  firstName:['', [Validators.required]],
-  lastName:['', [Validators.required]],
-  email:['', [Validators.required]],
-  password:['', [Validators.required]]
-})
-}
-ngOnInit(): void {
-  this.getUserData();
-}
-onFormSubmit(){
-  if(this.registerForm.valid){
-    console.log(this.registerForm.value);
-this.checkEmail= this.user.filter((n:any)=>n).map((n:any)=>n.email);
-if(this.checkEmail.includes(this.registerForm.value.email ||""))
-{
-  this._coreService.openSnackBar("user already exists","done")
+  registerForm: FormGroup;
+  user: any;
+  checkEmail!: any;
+  constructor(private _fb: FormBuilder, private _userService: UsersService, private _coreService: CoreService, private _dialog: MatDialog, private _dialogRef: MatDialogRef<LoginComponent>) {
+    this.registerForm = this._fb.group({
+      firstName: ['', [Validators.required]],
+      lastName: ['', [Validators.required]],
+      email: ['', [Validators.required]],
+      password: ['', [Validators.required]]
+    })
+  }
+  ngOnInit(): void {
+    this.getUserData();
+  }
 
-  
-}
-else{
-  this._userService.addUser(this.registerForm.value).subscribe({
-    next:(res)=>{
+  // to validate register form
 
-      this._coreService.openSnackBar("user added successfully","done")
-      this._dialog.closeAll()
-      this._dialog.open(LoginBoxComponent)
-    },
-    error:(err:any)=>{
-      console.log(err);
-      
+  onFormSubmit() {
+    if (this.registerForm.valid) {
+      this.checkEmail = this.user.filter((n: any) => n).map((n: any) => n.email);
+      if (this.checkEmail.includes(this.registerForm.value.email || "")) {
+        this._coreService.openSnackBar("user already exists", "done")
+
+
+      }
+      else {
+        this._userService.addUser(this.registerForm.value).subscribe({
+          next: (res) => {
+
+            this._coreService.openSnackBar("user added successfully", "done")
+            this._dialog.closeAll()
+            this._dialog.open(LoginBoxComponent)
+          },
+          error: (err: any) => {
+          }
+        })
+      }
+    } else {
+      this._coreService.openSnackBar("please enter valid details", "done")
     }
-  })
-}
-}  else{
-  this._coreService.openSnackBar("please enter valid details","done")
-}  
-}
-getUserData(){
-  this._userService.getUser().subscribe({
-    next:(res)=>{
-      this.user=res;
-      console.log(this.user.filter((n:any)=>n.firstName));
+  }
 
-    },
-    error:(err:any)=>{
-      console.log(err);
-      
-    }
-  })
-}
-cancel(){
-  this._dialog.closeAll()
-}
+  // to get available user data
+
+  getUserData() {
+    this._userService.getUser().subscribe({
+      next: (res) => {
+        this.user = res;
+      },
+      error: (err: any) => {
+      }
+    })
+  }
+
+  // to cancel the sign up box
+
+  cancel() {
+    this._dialog.closeAll()
+  }
 }

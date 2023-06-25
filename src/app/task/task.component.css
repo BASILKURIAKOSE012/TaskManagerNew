@@ -1,18 +1,22 @@
 .example-spacer {
-    flex: 1 1 auto;
+  flex: 1 1 auto;
+}
+
+.main-body {
+  padding-left: 2vw;
+  margin: 0 auto;
+  max-width: 90vw;
+
+  mat-form-field {
+    width: 100%;
   }
-  .main-body{
-    padding-left: 2vw;
-    margin: 0 auto;
-    max-width:90vw;
-    mat-form-field{
-      width: 100%;
-    }
-  }
-  .userName{
-    margin-right: 15vw;;
-  }
-  .logout{
-    margin-left: 5vw;
-  }
-  
+}
+
+.userName {
+  margin-right: 15vw;
+  ;
+}
+
+.logout {
+  margin-left: 5vw;
+}

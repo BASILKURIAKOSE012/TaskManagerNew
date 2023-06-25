@@ -10,16 +10,20 @@ import { SignUpBoxComponent } from '../sign-up-box/sign-up-box.component';
 })
 export class LoginComponent implements OnInit {
 
-  constructor(private _dialog:MatDialog){
+  constructor(private _dialog: MatDialog) {
 
   }
   ngOnInit(): void {
-    
+
   }
-  openLoginForm(){
+
+  //to open login form
+  openLoginForm() {
     this._dialog.open(LoginBoxComponent)
   }
-  openSignUpForm(){
+
+  // To open sign up form
+  openSignUpForm() {
     this._dialog.open(SignUpBoxComponent)
   }
 }

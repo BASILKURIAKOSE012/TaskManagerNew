@@ -1,25 +1,18 @@
-.content{
+.content {
     padding-top: 1vh;
 }
-/* .action{
-  margin-left: 6vw;
-} */
-.row{
+
+
+.row {
     display: flex;
-    gap:2vw;
+    gap: 2vw;
 }
-mat-form-field{
-    width:100%;
+
+mat-form-field {
+    width: 100%;
 }
-.action{
-    margin-left: 3vw;
+
+.action {
+    margin-left: 2vw;
 }
-    /* .b1{
-        flex:1;
-    padding: auto;
-    } */
-    /* .action{
-        button{
-            flex:1
-        }
-      } */
+

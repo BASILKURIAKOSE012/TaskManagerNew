@@ -1,11 +1,10 @@
-
 <div mat-dialog-title>
-    <h1>SIGN UP</h1>
+  <h1 style="color: blue;">SIGN UP</h1>
 </div>
-<form [formGroup]="registerForm" >
-<div mat-dialog-content class="content">
+<form [formGroup]="registerForm">
+  <div mat-dialog-content class="content">
     <div class="row">
-    <mat-form-field appearance="outline">
+      <mat-form-field appearance="outline">
         <mat-label>FirstName</mat-label>
         <input matInput formControlName="firstName" maxlength="20">
       </mat-form-field>
@@ -15,18 +14,19 @@
       </mat-form-field>
     </div>
     <div class="row">
-        <mat-form-field appearance="outline">
-            <mat-label>Email</mat-label>
-            <input matInput type="email" formControlName="email" maxlength="20" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" />
-          </mat-form-field>
-          <mat-form-field appearance="outline">
-            <mat-label>Password</mat-label>
-            <input matInput formControlName="password" maxlength="20">
-          </mat-form-field>
-        </div>
-</div>
-<div mat-dialog-actions class="action">
-    <button  mat-raised-button color="warn" type="button" (click)="cancel()">CANCEL</button>
-    <button mat-raised-button color="primary"  (click)="onFormSubmit()">REGISTER</button>
-</div>
+      <mat-form-field appearance="outline">
+        <mat-label>Email</mat-label>
+        <input matInput type="email" formControlName="email" maxlength="20"
+          pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" />
+      </mat-form-field>
+      <mat-form-field appearance="outline">
+        <mat-label>Password</mat-label>
+        <input matInput formControlName="password" maxlength="20">
+      </mat-form-field>
+    </div>
+  </div>
+  <div mat-dialog-actions class="action">
+    <button mat-raised-button color="warn" type="button" (click)="cancel()">CANCEL</button>
+    <button mat-raised-button color="primary" (click)="onFormSubmit()">REGISTER</button>
+  </div>
 </form>

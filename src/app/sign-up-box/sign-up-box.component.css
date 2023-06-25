@@ -1,20 +1,20 @@
-.content{
+.content {
     padding-top: 1vh;
 }
-.action{
-  margin-left: 6vw;
+
+.action {
+    margin-left: 6vw;
 }
-.row{
+
+.row {
     display: flex;
-    gap:2vw;
+    gap: 2vw;
 }
-mat-form-field{
-    width:100%;
+
+mat-form-field {
+    width: 100%;
 }
-.action{
+
+.action {
     margin-left: 11vw;
 }
-    /* .b1{
-        flex:1;
-    padding: auto;
-    } */

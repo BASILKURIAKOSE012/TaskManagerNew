@@ -1,32 +1,31 @@
-
 <div mat-dialog-title>
-    <h1>CREATE TASK</h1>
+  <h1 style="color: blue;">CREATE TASK</h1>
 </div>
-<form [formGroup]="taskForm" (ngSubmit)="onFormSubmit()" >
-<div mat-dialog-content class="content">
+<form [formGroup]="taskForm" (ngSubmit)="onFormSubmit()">
+  <div mat-dialog-content class="content">
     <div class="row">
-    <mat-form-field appearance="outline">
+      <mat-form-field appearance="outline">
         <mat-label>Title</mat-label>
         <input matInput formControlName="title" maxlength="20">
       </mat-form-field>
 
     </div>
     <div class="row">
-        <mat-form-field appearance="outline">
-            <mat-label>Description</mat-label>
-            <input matInput  formControlName="description" />
-          </mat-form-field>
-          
-        </div>
-        <div class="row">
-            <mat-form-field appearance="outline">
-                <mat-label>Status</mat-label>
-                <input matInput formControlName="status">
-              </mat-form-field>
-        </div>
-</div>
-<div mat-dialog-actions class="action">
+      <mat-form-field appearance="outline">
+        <mat-label>Description</mat-label>
+        <input matInput formControlName="description" />
+      </mat-form-field>
+
+    </div>
+    <div class="row">
+      <mat-form-field appearance="outline">
+        <mat-label>Status</mat-label>
+        <input matInput formControlName="status">
+      </mat-form-field>
+    </div>
+  </div>
+  <div mat-dialog-actions class="action">
     <button class="cancel" mat-raised-button color="warn" type="button" [mat-dialog-close]="false">CANCEL</button>
     <button class="save" mat-raised-button color="primary" type="submit">{{data?'UPDATE':'SAVE'}}</button>
-</div>
+  </div>
 </form>
