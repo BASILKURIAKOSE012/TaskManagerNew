@@ -1,0 +1,91 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "title": "json-server",
+      "author": "typicode"
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  },
+  "users": [
+    {
+      "firstName": "basil",
+      "lastName": "kuriakose",
+      "email": "123@gmail.com",
+      "password": "2680423",
+      "id": 1
+    },
+    {
+      "firstName": "Ryan",
+      "lastName": "Basil",
+      "email": "abc@gmail.com",
+      "password": "12345",
+      "id": 2
+    }
+  ],
+  "tasks": [
+    {
+      "title": "angular",
+      "description": "frontend",
+      "status": "completed",
+      "email": null,
+      "id": 2
+    },
+    {
+      "title": "Java 11",
+      "description": "backend",
+      "status": "completed",
+      "email": "123@gmail.com",
+      "id": 4
+    },
+    {
+      "title": "ff",
+      "description": "gg",
+      "status": "ggg",
+      "id": 5
+    },
+    {
+      "title": "ee",
+      "description": "ee",
+      "status": "ff",
+      "id": 6
+    },
+    {
+      "title": "Java",
+      "description": "BackEnd",
+      "status": "completed",
+      "email": "abc@gmail.com",
+      "id": 8
+    },
+    {
+      "title": "spring boot",
+      "description": "back end",
+      "status": "completed",
+      "email": "abc@gmail.com",
+      "id": 9
+    },
+    {
+      "title": "MongoDB",
+      "description": "database",
+      "status": "Completed",
+      "email": "abc@gmail.com",
+      "id": 10
+    },
+    {
+      "title": "MySQL",
+      "description": "data base",
+      "status": "completed",
+      "email": "123@gmail.com",
+      "id": 11
+    }
+  ]
+}

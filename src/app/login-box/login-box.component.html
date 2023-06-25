@@ -1,0 +1,22 @@
+<div mat-dialog-title>
+    <h1>LOGIN</h1>
+</div>
+<form [formGroup]="loginForm" >
+<div mat-dialog-content class="content">
+    <div class="row">
+    <mat-form-field appearance="outline">
+        <mat-label>Email</mat-label>
+        <input matInput type="email"  formControlName="email" maxlength="20">
+      </mat-form-field>
+    </div>
+    <div class="row">
+        <mat-form-field appearance="outline">
+            <mat-label>Password</mat-label>
+            <input matInput formControlName="password" maxlength="20">
+          </mat-form-field>
+        </div>
+</div>
+<div mat-dialog-actions class="action">
+    <button mat-raised-button color="primary"(click)="onFormSubmit()">LOGIN</button>
+</div>
+</form>
