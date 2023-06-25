@@ -4,7 +4,7 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 # Clone
 
-clone this repo into the workspace by using command - git clone 
+clone this repo into the workspace by using command - git clone https://github.com/BASILKURIAKOSE012/TaskManagerNew.git
 
 ## node modules
 
