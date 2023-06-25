@@ -1,5 +1,5 @@
 import { Component, Inject, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup } from '@angular/forms';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { DataService } from '../services/data.service';
 import { MAT_DIALOG_DATA, MatDialog, MatDialogRef } from '@angular/material/dialog';
 
@@ -16,9 +16,9 @@ taskForm!:FormGroup;
 currentUserEmail!:any;
 constructor(private _fb:FormBuilder,private _dataService:DataService,private _dialogRef:MatDialogRef<TaskComponent>,@Inject(MAT_DIALOG_DATA) public data: any,private _coreService:CoreService){
   this.taskForm= this._fb.group({
-    title:"",
-    description:"",
-    status:"",
+    title:['', [Validators.required]],
+    description:['', [Validators.required]],
+    status:['', [Validators.required]],
     email: ""
   })
 }

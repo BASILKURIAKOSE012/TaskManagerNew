@@ -30,6 +30,41 @@
       "email": "abc@gmail.com",
       "password": "12345",
       "id": 2
+    },
+    {
+      "firstName": "Ajith",
+      "lastName": "Paulose",
+      "email": "ajith@gmail.com",
+      "password": "ajith",
+      "id": 3
+    },
+    {
+      "firstName": "Soumya",
+      "lastName": "Kuriakose",
+      "email": "soumya@gmail.com",
+      "password": "soumya",
+      "id": 4
+    },
+    {
+      "firstName": "ddff",
+      "lastName": "fff",
+      "email": "12@gmail.com",
+      "password": "sss",
+      "id": 5
+    },
+    {
+      "firstName": "rfrff",
+      "lastName": "fff",
+      "email": "13332@gmail.com",
+      "password": "ss",
+      "id": 6
+    },
+    {
+      "firstName": "df",
+      "lastName": "ff",
+      "email": "12222@gmail.com",
+      "password": "ssss",
+      "id": 7
     }
   ],
   "tasks": [
@@ -52,12 +87,6 @@
       "description": "gg",
       "status": "ggg",
       "id": 5
-    },
-    {
-      "title": "ee",
-      "description": "ee",
-      "status": "ff",
-      "id": 6
     },
     {
       "title": "Java",

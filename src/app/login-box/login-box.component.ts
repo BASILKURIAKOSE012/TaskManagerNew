@@ -45,6 +45,7 @@ if(this.currentUser[0].password==this.password ){
 this._dataservice.currentUserEmail= this.email;
 this._dataservice.currentUserName=this.currentUser[0].firstName;
 this._dialog.closeAll()
+sessionStorage.setItem('login', "true")
 this._router.navigateByUrl("task");
 }
 else{
@@ -57,7 +58,7 @@ else{
   }
   }
   else{
-    this._coreService.openSnackBar("Please enter your details","done")
+    this._coreService.openSnackBar("Please enter valid details","done")
   }
 }
 getUserData(){

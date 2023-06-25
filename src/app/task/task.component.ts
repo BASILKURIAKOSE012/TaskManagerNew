@@ -7,6 +7,7 @@ import {MatSort} from '@angular/material/sort';
 import {MatTableDataSource} from '@angular/material/table';
 import { DataService } from '../services/data.service';
 import { CoreService } from '../core/core.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-task',
@@ -23,7 +24,7 @@ displayedColumns: string[] = ['id', 'title', 'description', 'status','action'];
   @ViewChild(MatPaginator) paginator!: MatPaginator;
   @ViewChild(MatSort) sort!: MatSort;
   constructor(private _userService:UsersService,private _dialog:MatDialog,private _dataService:DataService
-   ,private _coreService:CoreService ){
+   ,private _coreService:CoreService ,private _router:Router ){
 
   }
 
@@ -95,5 +96,10 @@ openEditForm(data: any) {
       }
     },
   });
+}
+logout(){
+  sessionStorage.clear()
+  sessionStorage.setItem("login","false")
+  this._router.navigateByUrl("")
 }
 }

@@ -2,7 +2,7 @@
 <div mat-dialog-title>
     <h1>SIGN UP</h1>
 </div>
-<form [formGroup]="registerForm" (ngSubmit)="onFormSubmit()">
+<form [formGroup]="registerForm" >
 <div mat-dialog-content class="content">
     <div class="row">
     <mat-form-field appearance="outline">
@@ -27,6 +27,6 @@
 </div>
 <div mat-dialog-actions class="action">
     <button  mat-raised-button color="warn" type="button" (click)="cancel()">CANCEL</button>
-    <button mat-raised-button color="primary" type="submit">REGISTER</button>
+    <button mat-raised-button color="primary"  (click)="onFormSubmit()">REGISTER</button>
 </div>
 </form>

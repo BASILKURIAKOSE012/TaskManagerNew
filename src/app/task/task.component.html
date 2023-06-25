@@ -1,7 +1,12 @@
 <mat-toolbar color="primary">
     <span>TASK MANAGER</span>
+    <button class="logout" mat-raised-button color="warn" (click)="logout()">
+      LOGOUT
+    </button>
     <span class="example-spacer"></span>
+    
     <span class="userName">Welcome {{currentUserName|uppercase}}</span>
+  
     <button mat-raised-button color="accent" (click)="createTaskForm()">
       CREATE TASK
     </button>
